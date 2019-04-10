@@ -3,10 +3,9 @@
 This repository contains code for the paper _Wave-Based Non-Line-of-Sight Imaging using Fast f-k Migration_ by David B. Lindell, Gordon Wetzstein, and Matthew O'Toole. The captured datasets can be downloaded separately from our [project webpage](http://computationalimaging.org).
 
 ## Captured Scenes
-
 ### Bike 
-<img src="scenes/bike_1.png" width="200" height="200" style="padding-right:20px;" />
-<img src="scenes/bike_2.png" width="200" height="200" /> 
+|<img src="scenes/bike_1.png" width="200" height="200" style="padding-right:20px;" />|<img src="scenes/bike_2.png" height="200" />|
+|---|---| 
 
 - Description: A white stone statue captured at approximately 1 m distance from the wall.
 - Resolution: 512 x 512
@@ -14,8 +13,8 @@ This repository contains code for the paper _Wave-Based Non-Line-of-Sight Imagin
 - Integration times: 10 min., 30 min., 60 min., 180 min.
 
 ### Discoball 
-<img src="scenes/discoball_1.png" width="200" height="200" style="padding-right:20px;" />
-<img src="scenes/discoball_2.png" width="200" height="200" /> 
+|<img src="scenes/discoball_1.png" width="200" height="200" style="padding-right:20px;" />|<img src="scenes/discoball_2.png"  height="200" />|
+|---|---|
 
 - Description: A specular disoball captured at approximately 1 m distance from the wall.
 - Resolution: 512 x 512
@@ -24,8 +23,8 @@ This repository contains code for the paper _Wave-Based Non-Line-of-Sight Imagin
 
 
 ### Dragon 
-<img src="scenes/dragon_1.png" width="200" height="200" style="padding-right:20px;" />
-<img src="scenes/dragon_2.png" width="200" height="200" /> 
+|<img src="scenes/dragon_1.png" width="200" height="200" style="padding-right:20px;" />|<img src="scenes/dragon_2.png" height="200" />|
+|---|---|
 
 - Description: A glossy dragon captured at approximately 1 m distance from the wall.
 - Resolution: 512 x 512
@@ -33,17 +32,16 @@ This repository contains code for the paper _Wave-Based Non-Line-of-Sight Imagin
 - Integration times: 15 sec., 1 min., 2 min., 10 min., 30 min., 60 min., 180 min.
 
 ### Interactive 
-<img src="scenes/interactive_1.png" height="200" style="padding-right:20px;" />
-<img src="scenes/interactive_2.png" height="200" /> 
+|<img src="scenes/interactive_1.png" height="200" style="padding-right:20px;" />|<img src="scenes/interactive_2.png" height="200" />|
+|---|---|
 
 - Description: Two video captures of a person moving around in a retroreflective outfit.
 - Resolution: 32 x 32 (4 fps), 64 x 64 (2 fps)
 - Scanned Area: 2 m x 2 m planar wall
 
 ### Nonplanar
-<img src="scenes/nonplanar_1.png" width="200" height="200" style="padding-right:20px;" />
-<img src="scenes/nonplanar_2.png" width="200" height="200" style="padding-right:20px;" />
-<img src="scenes/nonplanar_3.png" height="200" /> 
+|<img src="scenes/nonplanar_1.png" width="200" height="200" style="padding-right:20px;" />|<img src="scenes/nonplanar_2.png" height="200" style="padding-right:20px;" />|<img src="scenes/nonplanar_3.png" height="200" />|
+|---|---|---|
 
 - Description: Two retroreflective letters captured at approximately 1 m distance from the wall by scanning a non-planar surface. 
 - Resolution: 128 x 128
@@ -51,10 +49,8 @@ This repository contains code for the paper _Wave-Based Non-Line-of-Sight Imagin
 - Integration times: 150 sec.
 
 ### Outdoor 
-<img src="scenes/outdoor_1.jpg" width="200" height="200" />
-<img src="scenes/outdoor_2.jpg" width="200" height="200" />
-<img src="scenes/outdoor_3.jpg" width="200" height="200" />
-<img src="scenes/outdoor_4.png" width="200" height="200" /> 
+|<img src="scenes/outdoor_1.jpg" height="200" />|<img src="scenes/outdoor_2.jpg" height="200" />|<img src="scenes/outdoor_3.jpg" width="200" height="200" />|<img src="scenes/outdoor_4.png" height="200" />|
+|---|---|---|---|
 
 - Description: An outdoor scene captured by scanning the exterior of a building.
 - Resolution: 128 x 128
@@ -62,8 +58,8 @@ This repository contains code for the paper _Wave-Based Non-Line-of-Sight Imagin
 - Integration times: 10 min., 30 min., 50 min.
 
 ### Resolution 
-<img src="scenes/resolution_1.png" width="200" height="200" style="padding-right:20px;" />
-<img src="scenes/resolution_2.png" width="200" height="200" /> 
+|<img src="scenes/resolution_1.png" height="200" style="padding-right:20px;" />|<img src="scenes/resolution_2.png" height="200" />|
+|---|---|
 
 - Description: A resolution chart captured at approximately 1 m distance from the wall.
 - Resolution: 512 x 512
@@ -71,8 +67,8 @@ This repository contains code for the paper _Wave-Based Non-Line-of-Sight Imagin
 - Integration times: 10 min., 30 min., 60 min., 180 min.
 
 ### Statue 
-<img src="scenes/statue_1.png" width="200" height="200" style="padding-right:20px;" />
-<img src="scenes/statue_2.png" width="200" height="200" /> 
+|<img src="scenes/statue_1.png" height="200" style="padding-right:20px;" />|<img src="scenes/statue_2.png" height="200" />|
+|---|---|
 
 - Description: A white stone statue captured at approximately 1 m distance from the wall.
 - Resolution: 512 x 512
@@ -80,9 +76,8 @@ This repository contains code for the paper _Wave-Based Non-Line-of-Sight Imagin
 - Integration times: 10 min., 30 min., 60 min., 180 min.
 
 ### Teaser 
-<img src="scenes/teaser_1.png" width="200" height="200" style="padding-right:20px;" />
-<img src="scenes/teaser_2.png" width="200" height="200" style="padding-right:20px;" />
-<img src="scenes/teaser_3.png" width="200" height="200" /> 
+|<img src="scenes/teaser_1.png" height="200" style="padding-right:20px;" />|<img src="scenes/teaser_2.png" height="200" style="padding-right:20px;" />|<img src="scenes/teaser_3.png" height="200" />|
+|---|---|---|
 
 - Description: The teaser scene used in the paper which includes a number of objects, including a bookshelf, statue, dragon, and discoball.
 - Resolution: 512 x 512
