@@ -42,7 +42,7 @@ function nonplanar_reconstruction()
     rect_data = sqrt(rect_data(:, :, 1:512));
 
     if use_low_resolution
-        rect_data = imresize3(rect_data, [32, 32, 512]);
+        rect_data = imresize3d(rect_data, 32, 32, 512);
         z_offset = imresize(z_offset, [32, 32]);
     end
 

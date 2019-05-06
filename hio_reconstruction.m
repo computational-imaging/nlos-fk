@@ -20,7 +20,7 @@ function hio_reconstruction()
     load('phase_retrieval/meas_180min.mat');
     meas = sqrt(meas512);
     if use_low_resolution
-        meas = imresize3(meas, [32, 32, 512]);
+        meas = imresize3d(meas, 32, 32, 512);
     end
 
     N = size(meas,1);        % Spatial resolution of data

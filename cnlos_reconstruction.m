@@ -38,7 +38,7 @@ function result = cnlos_reconstruction(meas, tofgrid, wall_size, alg, crop)
     if ~isempty(tofgrid)
         for ii = 1:size(meas, 1)
             for jj = 1:size(meas,2 )
-                meas(ii, jj, :) = circshift(meas(ii, jj, :), -floor(tofgrid(ii, jj) / (bin_resolution*1e12)));
+                meas(ii, jj, :) = circshift(meas(ii, jj, :), [0, 0, -floor(tofgrid(ii, jj) / (bin_resolution*1e12))]);
             end
         end  
     end
@@ -211,6 +211,24 @@ function [mtx,mtxi] = resamplingOperator(M)
 end
 
 function out = filterLaplacian(vol)
-    w = fspecial3('log',5, 1);
+    % set filter parameters
+    hsize = 5;
+    std1 = 1;
+
+    % calculate filter weights
+    lim = (hsize - 1) / 2;
+    std2   = std1^2;
+
+    [x,y,z] = ndgrid(-lim:lim,-lim:lim, -lim:lim);
+    w  = exp(-(x.*x + y.*y + z.*z)/(2*std2));
+    w(w < eps * max(w(:))) = 0;
+    sumw = sum(w(:));
+    if sumw ~= 0
+    w  = w/sumw;
+    end;
+
+    w1 = w.*(x.*x + y.*y + z.*z - 3*std2)/(std2^2);
+    w = w1 - sum(w1(:))/hsize^3; % make the filter sum to zero
+
     out = convn(vol, w, 'same');
 end

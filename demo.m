@@ -1,4 +1,7 @@
 %% Run this demo script to step through the included reconstruction procedures
+% Assumes MATLAB R2016b or higher (lower versions may work but have not
+% been tested).
+addpath('./util');
 
 % First, run FBP, LCT, and f-k migration reconstructions for one of the
 % captured datasets
@@ -9,7 +12,7 @@ load('statue/tof.mat');
 load('statue/meas_10min.mat');
 
 % resize to low resolution to reduce memory requirements
-measlr = imresize3(meas, [64, 64, 2048]); % y, x, t
+measlr = imresize3d(meas, 64, 64, 2048); % y, x, t
 tofgridlr = imresize(tofgrid, [64, 64]); 
 wall_size = 2; % scanned area is 2 m x 2 m
 
