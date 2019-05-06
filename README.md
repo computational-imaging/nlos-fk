@@ -1,6 +1,6 @@
 # Non-Line-of-Sight Imaging Code & Datasets
 
-This repository contains code for the paper _Wave-Based Non-Line-of-Sight Imaging using Fast f-k Migration_ by David B. Lindell, Gordon Wetzstein, and Matthew O'Toole. The captured datasets can be downloaded separately from our [project webpage](http://computationalimaging.org).
+This repository contains code for the paper _Wave-Based Non-Line-of-Sight Imaging using Fast f-k Migration_ by David B. Lindell, Gordon Wetzstein, and Matthew O'Toole. The captured datasets can be downloaded separately from our [project webpage](http://www.computationalimaging.org/publications/nlos-fk/).
 
 ## Captured Scenes
 ### Bike 
