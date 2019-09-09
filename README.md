@@ -130,7 +130,7 @@ A hybrid-input output phase retrieval algorithm can be used to process the tease
 
 #### Reconstruction Demo Program
 
-Run the `demo.m` script to reconstruct a sample scene with FBP, LCT, and f-k migration. We also demonstrate how to reconstruct the interactive results, the non-planar scene, and how to run the phase retrieval algorithm.
+Run the `demo.m` script to reconstruct a sample scene with FBP, LCT, f-k migration, and the [phasor fields method](https://www.nature.com/articles/s41586-019-1461-3) by Liu et al. We also demonstrate how to reconstruct the interactive results, the non-planar scene, and how to run the phase retrieval algorithm.
 
 **License**  
 The code and dataset are licensed under the following license:
