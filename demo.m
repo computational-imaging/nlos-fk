@@ -12,8 +12,8 @@ load('statue/tof.mat');
 load('statue/meas_10min.mat');
 
 % resize to low resolution to reduce memory requirements
-measlr = imresize3d(meas, 64, 64, 2048); % y, x, t
-tofgridlr = imresize(tofgrid, [64, 64]); 
+measlr = imresize3d(meas, 128, 128, 2048); % y, x, t
+tofgridlr = imresize(tofgrid, [128, 128]); 
 wall_size = 2; % scanned area is 2 m x 2 m
 
 % run FBP
@@ -29,6 +29,12 @@ lct = cnlos_reconstruction(measlr, tofgridlr, wall_size, algorithm);
 % run f-k migration
 fprintf('\nRunning f-k migration\n');
 algorithm = 2;
+fk = cnlos_reconstruction(measlr, tofgridlr, wall_size, algorithm);
+
+% run phasor fields reconstruction by Liu et al.
+% (https://www.nature.com/articles/s41586-019-1461-3)
+fprintf('\nRunning phasor fields\n');
+algorithm = 3;
 fk = cnlos_reconstruction(measlr, tofgridlr, wall_size, algorithm);
 
 %% Reconstruct a frame from the interactive results
