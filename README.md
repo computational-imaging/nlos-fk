@@ -105,6 +105,7 @@ The code/dataset should be organized as in the following directory tree
 		demo.m
 		hio_reconstruction.m
 		LICENSE
+        nonconfocal_reconstruction.m
 		nonplanar_reconstruction.m
 		README.md
 
@@ -122,11 +123,11 @@ Finally, we include example reconstructions (at 512x512 spatial resolution) for 
 #### Interactive Scenes
 These scenes were captured by rapidly scanning the wall at 2 or 4 fps and capturing 32 x 32 or 64 x64 spatial samples. The measurements capture a person moving around in a retroreflective outfit. The directory contains a set of 4D datafiles with 3D measurement volumes and f-k migration reconstructions for each captured frame. Videos of the scene captured with a conventional camera are also included. 
  
-#### Non-Planar Scene
-A non-planar scene consisting of two retroreflective letters was captured by scanning a deformed projector screen. We include the measurements, calibration files, and reconstructed 3D volumes using f-k migration or filtered backprojection. `The nonplanar_reconstruction.m` file can be run to load the measurements and generate the reconstructions. See the file for additional details.
-
 #### Non-Confocal Scene
 The non-confocal processing is shown for an example scene from the [Zaragosa NLOS dataset](https://graphics.unizar.es/nlos_dataset.html). Before running the function, download the non-confocal dataset from the Zaragosa webpage or using this [direct link](https://drive.google.com/uc?export=download&id=1HZrlcSnme0qDLWanOlHgK2OgwLBeU6JX).
+
+#### Non-Planar Scene
+A non-planar scene consisting of two retroreflective letters was captured by scanning a deformed projector screen. We include the measurements, calibration files, and reconstructed 3D volumes using f-k migration or filtered backprojection. `The nonplanar_reconstruction.m` file can be run to load the measurements and generate the reconstructions. See the file for additional details.
 
 #### Phase Retrieval
 A hybrid-input output phase retrieval algorithm can be used to process the teaser scene by running the `hio_reconstruction.m` file. We include the measurement volume used for processing, as well as full-resolution reconstructions of the initial volume and after 50 iterations of the algorithm.
