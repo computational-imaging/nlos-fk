@@ -125,6 +125,9 @@ These scenes were captured by rapidly scanning the wall at 2 or 4 fps and captur
 #### Non-Planar Scene
 A non-planar scene consisting of two retroreflective letters was captured by scanning a deformed projector screen. We include the measurements, calibration files, and reconstructed 3D volumes using f-k migration or filtered backprojection. `The nonplanar_reconstruction.m` file can be run to load the measurements and generate the reconstructions. See the file for additional details.
 
+#### Non-Confocal Scene
+The non-confocal processing is shown for an example scene from the [Zaragosa NLOS dataset](https://graphics.unizar.es/nlos_dataset.html). Before running the function, download the non-confocal dataset from the Zaragosa webpage or using this [direct link](https://drive.google.com/uc?export=download&id=1HZrlcSnme0qDLWanOlHgK2OgwLBeU6JX).
+
 #### Phase Retrieval
 A hybrid-input output phase retrieval algorithm can be used to process the teaser scene by running the `hio_reconstruction.m` file. We include the measurement volume used for processing, as well as full-resolution reconstructions of the initial volume and after 50 iterations of the algorithm.
 

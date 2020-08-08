@@ -1,4 +1,4 @@
-function result = cnlos_reconstruction(meas, tofgrid, wall_size, alg, crop)
+function result = cnlos_reconstruction(meas, tofgrid, wall_size, alg, crop, bin_resolution)
 % Reconstruction procedures for "Confocal Non-Line-of-Sight Imaging Based on the Light Cone Transform"
 % by Matthew O'Toole, David B. Lindell, and Gordon Wetzstein.
 % and for "Wave-Based Non-Line-of-Sight Imaging using Fast f-k Migration"
@@ -20,11 +20,13 @@ function result = cnlos_reconstruction(meas, tofgrid, wall_size, alg, crop)
 %         for time-of-flight delays
 
     % Constants
-    bin_resolution = 32e-12; % Native bin resolution for SPAD is 4 ps
-    c              = 3e8;    % Speed of light (meters per second)
+    c = 3e8;    % Speed of light (meters per second)
     width = wall_size / 2;
     if ~exist('crop', 'var') % bin index to crop measurements after aligning
         crop = 512;          % so that direct component is at t=0
+    end
+    if ~exist('bin_resolution', 'var')
+       bin_resolution = 32e-12; % temporal bin resolution of measurements 
     end
     
     % Parameters
