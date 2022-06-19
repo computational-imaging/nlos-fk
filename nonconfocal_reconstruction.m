@@ -3,7 +3,7 @@ function nonconfocal_reconstruction(varargin)
 % Non-Line-of-Sight Imaging using Fast f-k Migration" by David B. Lindell, 
 % Matthew O'Toole, and Gordon Wetzstein. 
 % 
-% The simulated data for this procedure can be downloaded from the Zaragosa
+% The simulated data for this procedure can be downloaded from the Zaragoza
 % NLOS dataset at https://graphics.unizar.es/nlos_dataset.html
 % The direct download link to the dataset is 
 % https://drive.google.com/uc?export=download&id=1HZrlcSnme0qDLWanOlHgK2OgwLBeU6JX
@@ -30,7 +30,7 @@ function nonconfocal_reconstruction(varargin)
        
         fname = './Z_l[0.00,-0.50,0.00]_r[1.57,0.00,3.14]_v[0.81,0.01,0.81]_s[16]_l[16]_gs[1.00].hdf5';
         if ~exist(fname, 'file')
-           error(['Download the simualted non-confocal dataset from the Zaragosa NLOS webpage' ...
+           error(['Download the simualted non-confocal dataset from the Zaragoza NLOS webpage' ...
                   ' at https://graphics.unizar.es/nlos_dataset.html, or use the direct download' ...
                   ' link https://drive.google.com/uc?export=download&id=1HZrlcSnme0qDLWanOlHgK2OgwLBeU6JX']);
         end
@@ -80,7 +80,7 @@ function nonconfocal_reconstruction(varargin)
         zero_append = tMin / tDelta;
         data = cat(3, zeros(size(data, 1), size(data, 2), zero_append), data);
 
-        fprintf('\tReparamaterize + normal moveout correction\n');
+        fprintf('\tReparameterize + normal moveout correction\n');
         R = 256;
         data = data(:, :, 1:1024);
         data = imresize3(data, [R, R, 1024]);
@@ -215,11 +215,13 @@ function meas = reparameterize(laserGridPositions, laserPosition, cameraPosition
             offset_x = offsets(h_idx, 1);
             offset_y = offsets(h_idx, 2);
             val = squeeze(data(ii, jj, :));
-            meas(m_idx, h_idx, :) = NMO(t, v, offset_x, offset_y, val);
+            meas(m_idx, h_idx, :) = squeeze(meas(m_idx, h_idx, :))' + NMO(t, v, offset_x, offset_y, val);
             m_added(m_idx) = m_added(m_idx) + 1;
         end
     end
 
+    meas = squeeze(sum(meas, 2));
+    meas = reshape(meas, 31, 31, []);
     m_added = reshape(m_added, 31, 31);
     for ii = 1:size(m_added, 1)
         for jj = 1:size(m_added, 2)
@@ -228,7 +230,6 @@ function meas = reparameterize(laserGridPositions, laserPosition, cameraPosition
     end
 
     meas(isnan(meas)) = 0;
-    meas = squeeze(sum(meas, 2));
     m = int32(sqrt(size(midpoints, 1)));
     meas = reshape(meas, m, m, []);
 
